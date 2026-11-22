@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StayReel |Tour Videos for Rental Hosts</title>
+<meta name="description" content="AI-made videos built from your property’s real design and photos, for Instagram, TikTok and your listing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&family=Outfit:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#05061a;--cy:#3ee8ff;--vi:#7c6cff;--mg:#ff3dac;--tx:#eef1ff;--mu:#9aa3c7;--gl:rgba(255,255,255,.05);--bd:rgba(255,255,255,.12)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',system-ui,sans-serif;background:radial-gradient(ellipse at 20% 0%,#14164a 0%,var(--bg) 55%) fixed;color:var(--tx);line-height:1.6;overflow-x:hidden}
+#stars{position:fixed;inset:0;z-index:0;pointer-events:none}
+.star{position:absolute;border-radius:50%;background:#fff;animation:tw 4s infinite ease-in-out}
+@keyframes tw{50%{opacity:.12}}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+main,footer{position:relative;z-index:2}
+nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9;display:flex;gap:4px;padding:6px;border:1px solid var(--bd);border-radius:999px;background:rgba(10,12,40,.7);backdrop-filter:blur(12px);max-width:94vw;overflow-x:auto}
+nav a{font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--mu);text-decoration:none;padding:8px 12px;border-radius:999px;white-space:nowrap}
+nav a.on{background:rgba(62,232,255,.14);color:var(--cy)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:110px 0}
+.lbl{font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.12em;color:var(--cy);text-transform:uppercase;margin-bottom:16px}
+h1,h2{font-family:'Unbounded',sans-serif;font-weight:800;line-height:1.1;text-transform:uppercase}
+h1{font-size:clamp(1.9rem,5.6vw,4rem);max-width:720px}
+h2{font-size:clamp(1.5rem,3.8vw,2.6rem);max-width:760px;margin-bottom:36px}
+.g{background:linear-gradient(90deg,var(--cy),var(--vi));-webkit-background-clip:text;background-clip:text;color:transparent}
+.g2{background:linear-gradient(90deg,var(--vi),var(--mg));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:110px}
+.hero p{color:var(--mu);max-width:500px;margin:24px 0 32px;font-size:1.1rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:14px;font-weight:600;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--vi),#5b8cff);box-shadow:0 8px 30px rgba(124,108,255,.35)}
+.btn.o{background:var(--gl);border:1px solid var(--bd);box-shadow:none}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cards.t{grid-template-columns:repeat(3,1fr)}
+.card{background:var(--gl);border:1px solid var(--bd);border-radius:18px;padding:24px;backdrop-filter:blur(10px);transition:transform .15s}
+.card h3{font-family:'Unbounded',sans-serif;font-size:.85rem;text-transform:uppercase;margin:12px 0 8px}
+.card p,.card li{color:var(--mu);font-size:.93rem}
+.ico{font-size:1.5rem}
+.demo{aspect-ratio:9/14;display:grid;place-items:center;text-align:center;background:linear-gradient(160deg,rgba(124,108,255,.35),rgba(255,61,172,.2) 60%,rgba(62,232,255,.2))}
+.demo{padding:0;overflow:hidden}
+.demo video{width:100%;height:100%;object-fit:cover;display:block}
+.demo b{display:grid;place-items:center;width:64px;height:64px;margin:0 auto 12px;border-radius:50%;background:rgba(255,255,255,.9);color:#111;font-size:1.4rem;padding-left:4px}
+.demo span{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--mu)}
+.steps{display:grid;gap:14px;max-width:640px;border-left:2px solid rgba(62,232,255,.4);padding-left:26px}
+.steps .card{position:relative}
+.steps .card::before{content:"";position:absolute;left:-35px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:2px solid var(--cy);box-shadow:0 0 12px var(--cy)}
+.pk ul{list-style:none;padding:0;margin:14px 0}
+.pk li::before{content:"✓ ";color:var(--cy)}
+.pk .pr{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--cy)}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chips span{font-family:'JetBrains Mono',monospace;font-size:.72rem;padding:5px 10px;border-radius:8px;background:rgba(255,255,255,.07);color:var(--mu)}
+.av{position:relative;width:210px;height:210px;margin:0 auto}
+.av i{position:absolute;inset:14px;border-radius:50%;display:grid;place-items:center;font-family:'Unbounded',sans-serif;font-size:3rem;background:linear-gradient(135deg,#1b1f5e,#3a1a6e);border:3px solid var(--cy);box-shadow:0 0 40px rgba(62,232,255,.5)}
+.av img{position:absolute;inset:14px;width:calc(100% - 28px);height:calc(100% - 28px);border-radius:50%;object-fit:cover;border:3px solid var(--cy);box-shadow:0 0 40px rgba(62,232,255,.5)}
+.av::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid rgba(124,108,255,.7);transform:rotate(-20deg) scaleY(.45);animation:orb 9s linear infinite}
+@keyframes orb{to{transform:rotate(340deg) scaleY(.45)}}
+.ct{text-align:center}
+.ct h2{margin-left:auto;margin-right:auto}
+.ct p{color:var(--mu);margin:-16px 0 28px}
+.ct .btns{justify-content:center}
+footer{padding:30px 0;text-align:center;color:var(--mu);font-size:.85rem}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:860px){.cards,.cards.t{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}#gl{opacity:.45}section{padding:80px 0}}
+@media(max-width:520px){.cards,.cards.t{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+<canvas id="gl"></canvas>
+<nav>
+  <a href="#home" class="on">Home</a><a href="#included">Included</a><a href="#demos">Demos</a><a href="#process">Process</a><a href="#packages">Packages</a><a href="#about">About</a><a href="#contact">Contact</a>
+</nav>
+<main>
+<section id="home" class="hero"><div class="wrap">
+  <p class="lbl" style="margin:0 0 16px">// StayReel [ AI videos for rental hosts ]</p>
+  <h1>Your guest finds you on Instagram. <span class="g">Now they book</span> <span class="g2">your place.</span></h1>
+  <p>I turn your property’s real design and photos into AI-made videos for Instagram, TikTok and your listing. Made for mobile, where your guests are scrolling.</p>
+  <div class="btns"><a class="btn" href="#contact">Request a sample</a><a class="btn o" href="#demos">See demos</a></div>
+</div></section>
+
+<section id="included"><div class="wrap">
+  <p class="lbl rv">// 01 [ What’s included ]</p>
+  <h2 class="rv">Everything your property needs on video</h2>
+  <div class="cards rv">
+    <div class="card"><div class="ico">🎬</div><h3>Vertical reels</h3><p>9:16 videos made for Instagram, TikTok and Shorts.</p></div>
+    <div class="card"><div class="ico">🏠</div><h3>Built from your design</h3><p>Your real layout, decor and photos become the story.</p></div>
+    <div class="card"><div class="ico">📐</div><h3>Every format</h3><p>Vertical and horizontal versions for social, listing and ads.</p></div>
+    <div class="card"><div class="ico">🚀</div><h3>Ready to post</h3><p>Files delivered ready to upload to your channels.</p></div>
+  </div>
+</div></section>
+
+<section id="demos"><div class="wrap">
+  <p class="lbl rv">// 02 [ Demos ]</p>
+  <h2 class="rv">Sample videos to see the style</h2>
+  <div class="cards t rv">
+    <div class="card demo"><video src="videos/demo1.mp4#t=0.1" controls playsinline preload="metadata"></video></div>
+    <div class="card demo"><video src="videos/demo2.mp4#t=0.1" controls playsinline preload="metadata"></video></div>
+    <div class="card demo"><video src="videos/demo3.mp4#t=0.1" controls playsinline preload="metadata"></video></div>
+  </div>
+</div></section>
+
+<section id="process"><div class="wrap">
+  <p class="lbl rv">// 03 [ How it works ]</p>
+  <h2 class="rv">From first message to finished video</h2>
+  <div class="steps rv">
+    <div class="card"><h3>1. Chat and briefing</h3><p>You send photos and tell me about your property and style over WhatsApp.</p></div>
+    <div class="card"><h3>2. Preview</h3><p>I create a first version and you request changes before we close.</p></div>
+    <div class="card"><h3>3. Delivery</h3><p>You get the final files, ready to post.</p></div>
+  </div>
+</div></section>
+
+<section id="packages" class="pk"><div class="wrap">
+  <p class="lbl rv">// 04 [ Packages ]</p>
+  <h2 class="rv">Choose the size of your project</h2>
+  <div class="cards t rv">
+    <div class="card"><h3>Single Reel</h3><ul><li>1 vertical video</li><li>Based on your photos</li><li>1 round of changes</li></ul><p class="pr">Pricing on request</p></div>
+    <div class="card"><h3>Property Pack</h3><ul><li>Several videos</li><li>Vertical and horizontal</li><li>2 rounds of changes</li></ul><p class="pr">Pricing on request</p></div>
+    <div class="card"><h3>Seasonal Pack</h3><ul><li>New videos each season</li><li>Multiple properties</li><li>Priority delivery</li></ul><p class="pr">Pricing on request</p></div>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap">
+  <p class="lbl rv">// 05 [ About ]</p>
+  <h2 class="rv">Who makes your videos</h2>
+  <div class="about rv">
+    <div class="card"><p style="font-size:1.02rem;color:var(--tx)">I’m Renan, a front-end developer and video creator. I use Design tools to turn your property’s design into videos that look great and stay true to the place. You tell me about your property, and I take care of the rest.</p>
+      <div class="chips"><span>Real photos only</span><span>Made for mobile</span><span>Easy changes</span></div></div>
+    <div class="av"><img src="foto.png" alt="Renan" onerror="if(!this.dataset.f){this.dataset.f=1;this.src='https://github.com/gabrielmartinsrenan-hub.png?size=400'}else{this.outerHTML='<i>R</i>'}"></div>
+  </div>
+</div></section>
+
+<section id="contact" class="ct"><div class="wrap">
+  <p class="lbl rv">// 06 [ Let’s talk ]</p>
+  <h2 class="rv">Ready to show off your <span class="g">property?</span></h2>
+  <p class="rv">Send a few photos and get a free sample.</p>
+  <div class="btns rv">
+    <!-- TODO: replace SEUNUMERO with your WhatsApp number (digits only, with country code) -->
+    <a class="btn" href="https://wa.me/SEUNUMERO?text=Hi!%20I%27d%20like%20a%20free%20sample%20video%20for%20my%20property." target="_blank" rel="noopener">Message me on WhatsApp</a>
+    <!-- TODO: replace # with your Instagram link -->
+    <a class="btn o" href="#" target="_blank" rel="noopener">Instagram</a>
+  </div>
+</div></section>
+</main>
+<footer>© 2026 StayReel. AI videos for rental hosts.</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+var st=document.getElementById('stars');
+for(var i=0;i<90;i++){var s=document.createElement('i');s.className='star';var z=Math.random()*2+.5;s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+z+'px;height:'+z+'px;opacity:'+(Math.random()*.7+.2)+';animation-delay:'+Math.random()*4+'s';st.appendChild(s);}
+var links=[].slice.call(document.querySelectorAll('nav a'));
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id);});}});},{rootMargin:'-45% 0px -50% 0px'});
+links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t)io.observe(t);});
+var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){rv.observe(el);});
+document.querySelectorAll('.card').forEach(function(c){
+ c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateX('+(-y*10)+'deg) rotateY('+(x*10)+'deg) translateZ(6px)';});
+ c.addEventListener('mouseleave',function(){c.style.transform='';});
+});
+if(typeof THREE==='undefined')return;
+var R=new THREE.WebGLRenderer({canvas:document.getElementById('gl'),alpha:true,antialias:true});
+R.setPixelRatio(Math.min(window.devicePixelRatio,2));
+var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(40,1,.1,50);C.position.z=9;
+S.add(new THREE.AmbientLight(0x8890ff,.8));
+var l1=new THREE.PointLight(0x3ee8ff,2,30);l1.position.set(4,3,5);S.add(l1);
+var l2=new THREE.PointLight(0xff3dac,2,30);l2.position.set(-4,-2,4);S.add(l2);
+var H=new THREE.Group();S.add(H);
+function part(geo,fill,edge){var m=new THREE.Mesh(geo,new THREE.MeshStandardMaterial({color:fill,transparent:true,opacity:.6,roughness:.3,metalness:.4}));m.add(new THREE.LineSegments(new THREE.EdgesGeometry(geo),new THREE.LineBasicMaterial({color:edge})));H.add(m);return m;}
+part(new THREE.BoxGeometry(2.2,1.5,1.8),0x1b1f5e,0x3ee8ff);
+var roof=part(new THREE.ConeGeometry(1.95,1.1,4),0x3a1a6e,0xff3dac);roof.position.y=1.3;roof.rotation.y=Math.PI/4;
+function win(x,y,w,h,c){var m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:c}));m.position.set(x,y,.91);H.add(m);}
+win(.6,.15,.5,.45,0xffd27a);win(-.6,.15,.5,.45,0xffd27a);win(0,-.3,.42,.8,0x3ee8ff);
+var ring=new THREE.Mesh(new THREE.TorusGeometry(2.2,.02,8,90),new THREE.MeshBasicMaterial({color:0x7c6cff}));ring.rotation.x=Math.PI/2.3;H.add(ring);
+var play=new THREE.Mesh(new THREE.ConeGeometry(.3,.5,3),new THREE.MeshBasicMaterial({color:0xff3dac}));play.rotation.z=-Math.PI/2;H.add(play);
+H.rotation.x=.25;H.scale.setScalar(1.15);
+function size(){var w=window.innerWidth,h=window.innerHeight;R.setSize(w,h,false);C.aspect=w/h;C.updateProjectionMatrix();}
+window.addEventListener('resize',size);size();
+var mx=0,my=0;window.addEventListener('mousemove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;});
+var rm=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function frame(t){
+ var p=window.scrollY/Math.max(1,document.documentElement.scrollHeight-innerHeight),amp=innerWidth<860?.8:3.1;
+ H.position.x=Math.cos(p*Math.PI*3)*amp*.95;
+ H.position.y=(rm?0:Math.sin(t*.0012)*.18)-p*.3;
+ H.rotation.y=p*Math.PI*5+(rm?0:t*.0004)+mx*.4;
+ H.rotation.x=.25+my*.2;
+ ring.rotation.z=rm?0:t*.0008;
+ play.position.set(1.9,1.4+(rm?0:Math.sin(t*.002)*.12),.4);
+ R.render(S,C);requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
